@@ -1,0 +1,53 @@
+.chrome49 .flex_height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.chrome49 .flex_column {
+  display: flex;
+  flex-direction: column;
+}
+.chrome49 .flex_row {
+  display: flex;
+  flex-direction: row;
+}
+.chrome49 .flex_1 {
+  flex: 1;
+}
+.chrome49 .flex_auto {
+  flex: auto;
+}
+.chrome49 .height_100 {
+  height: 100%;
+}
+.chrome49 .width_100 {
+  width: 100%;
+}
+.chrome49 .item {
+  border: 1px solid #000;
+  background-color: #eee;
+}
+.chrome49 .relative {
+  position: relative;
+}
+.chrome49 .absolute {
+  position: absolute;
+  /* width: 100%; */
+}
+.chrome49 .container {
+  height: 100%;
+  border: 1px solid #aaa;
+  background-color: #ddd;
+}
+.chrome49 .header {
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  background-color: cornflowerblue;
+}
+.chrome49 .footer {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: rgb(42, 169, 201);
+}

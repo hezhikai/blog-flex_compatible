@@ -1,0 +1,25 @@
+.flex_direction .container {
+  height: 200px;
+  border: 1px solid #aaa;
+  background-color: #ddd;
+}
+.flex_direction .item {
+  border: 1px solid #000;
+  background-color: #eee;
+}
+.flex_direction .flex_row {
+  display: flex;
+  flex-direction: row;
+}
+.flex_direction .flex_rowReverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.flex_direction .flex_column {
+  display: flex;
+  flex-direction: column;
+}
+.flex_direction .flex_columnReverse {
+  display: flex;
+  flex-direction: column-reverse;
+}

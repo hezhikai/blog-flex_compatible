@@ -1,0 +1,51 @@
+html,
+body {
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.nav {
+  font-size: 0;
+}
+.nav a:first-child {
+  border-left: none;
+}
+.nav a {
+  border-left: 1px solid #fff;
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #000;
+  margin: 5px 0;
+  padding: 10px;
+  text-decoration: none;
+  line-height: 16px;
+}
+#content {
+  min-height: 0;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* .main {
+  background-color: #0f0;
+  display: inline-flex;
+}
+.main > div {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+.main div:nth-child(2) {
+  height: 60px;
+} */

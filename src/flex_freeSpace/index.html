@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="/src/flex_freeSpace/index.css">
+<h1>子元素：默认样式</h1>
+<div class="container flex_row width500">
+  <div class="item width100">item-1234567890</div>
+  <div class="item width100">item2item2、item-2、item-2</div>
+  <div class="item width100">一二三四五六七八九十</div>
+  <div class="item width100">item-1</div>
+  <div class="item width100">item-2</div>
+  <div class="item width100">item3item3item3item3item3</div>
+</div>
+<h1>子元素：flex-grow</h1>
+<h4>子元素未设置宽度，flex-basis 为元素内容宽度</h4>
+<div class="container flex_row width500">
+  <div class="item flex_grow1">short</div>
+  <div class="item flex_grow1">middle-size-content</div>
+  <div class="item flex_grow1">largeSizeContentWithoutWrap</div>
+</div>
+<h4>子元素设置宽度，flex-basis 为设置的宽度</h4>
+<div class="container flex_row width500">
+  <div class="item width50 flex_grow1">width-50</div>
+  <div class="item width100 flex_grow1">width-100</div>
+  <div class="item width50 flex_grow1">width-50</div>
+</div>
+<h4>子元素 flex-basis 设为0</h4>
+<div class="container flex_row width500">
+  <div class="item flex_basis0 flex_grow1">content</div>
+  <div class="item flex_basis0 flex_grow1">content</div>
+  <div class="item flex_basis0 flex_grow1">content</div>
+</div>
+<h1>子元素：flex-shrink</h1>
+<h4>子元素未设置宽度，flex-basis 为元素内容宽度</h4>
+<div class="container flex_row width500">
+  <div class="item flex_shrink1">short</div>
+  <div class="item flex_shrink1">middle-size-content-with-split-code</div>
+  <div class="item flex_shrink1">largeSizeContentWithoutWrap</div>
+</div>
+<h4>子元素设置宽度，flex-basis 为设置的宽度</h4>
+<div class="container flex_row width500">
+  <div class="item width300 flex_shrink1">width-300</div>
+  <div class="item width200 flex_shrink1">width-200</div>
+  <div class="item width100 flex_shrink1">width-100</div>
+</div>
+<h4>子元素 flex-basis 设为0</h4>
+<div class="container flex_row width500">
+  <div class="item flex_basis0 flex_shrink1">content-content-content-content-content-content</div>
+  <div class="item flex_basis0 flex_shrink1">contentcontentcontentcontent</div>
+  <div class="item flex_basis0 flex_shrink1">content</div>
+</div>
+<h1>flex: auto 与 flex: 1</h1>
+<h4>flex: auto</h4>
+<div class="container flex_row width500">
+  <div class="item flex_auto">so-very-long-width</div>
+  <div class="item flex_auto">middle-width</div>
+  <div class="item flex_auto">short</div>
+</div>
+<h4>flex: 1</h4>
+<div class="container flex_row width500">
+  <div class="item flex_1">so-very-long-width</div>
+  <div class="item flex_1">middle-width</div>
+  <div class="item flex_1">short</div>
+</div>

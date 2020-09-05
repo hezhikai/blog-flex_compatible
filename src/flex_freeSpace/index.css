@@ -1,0 +1,42 @@
+.flex_freeSpace .container {
+  border: 1px solid #aaa;
+  background-color: #ddd;
+}
+.flex_freeSpace .item {
+  border: 1px solid #000;
+  background-color: #eee;
+}
+.flex_freeSpace .flex_row {
+  display: flex;
+  flex-direction: row;
+}
+.flex_freeSpace .flex_auto {
+  flex: auto;
+}
+.flex_freeSpace .flex_1 {
+  flex: 1;
+}
+.flex_freeSpace .flex_grow1 {
+  flex-grow: 1;
+}
+.flex_freeSpace .flex_basis0 {
+  flex-basis: 0;
+}
+.flex_freeSpace .flex_shrink1 {
+  flex-shrink: 1;
+}
+.flex_freeSpace .width50 {
+  width: 50px;
+}
+.flex_freeSpace .width100 {
+  width: 100px;
+}
+.flex_freeSpace .width200 {
+  width: 200px;
+}
+.flex_freeSpace .width300 {
+  width: 300px;
+}
+.flex_freeSpace .width500 {
+  width: 500px;
+}

@@ -1,0 +1,38 @@
+.min_content .flex_height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.min_content .flex_row {
+  display: flex;
+  flex-direction: row;
+}
+.min_content .flex_column {
+  display: flex;
+  flex-direction: column;
+}
+.min_content .container {
+  height: 100%;
+  border: 1px solid #aaa;
+  background-color: #ddd;
+}
+.min_content .footer {
+  line-height: 100px;
+  text-align: center;
+  background-color: rgb(42, 169, 201);
+}
+.min_content .height200 {
+  height: 200px;
+}
+.min_content .height500 {
+  height: 500px;
+}
+.min_content .height1000 {
+  height: 1000px;
+}
+.min_content .flex_shrink {
+  flex-shrink: 0;
+}
+.min_content .minContent {
+  width: min-content;
+}

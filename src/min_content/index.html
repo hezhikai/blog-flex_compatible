@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/src/min_content/index.css">
+<div class="container flex_column">
+  <div class="flex_column">
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>aaa</div>
+    <div>bbb</div>
+    <div>bbb</div>
+    <div>bbb</div>
+  </div>
+  <div class="footer height1000">footer</div>
+  <!-- 差异描述：flexbox 一个子元素设置了 flex，另一个子元素设置了很高的高度，当 flexbox 高度不足以容纳两者时
+  两者高度都会受到压缩，但在 chrome49 下设置了 flex 的子元素，会被压缩到连其子元素都无法完整展示
+  而 chrome79 下设置了 flex 的子元素，则会尽可能保留其子元素的展示 -->
+  <!-- 解决方案：若要保持设置了 flex 的子元素的完整展示，最好设置 flex 的同时设置 flex-shrink: 0; -->
+</div>

@@ -1,0 +1,55 @@
+.chrome79 .flex_column {
+  display: flex;
+  flex-direction: column;
+}
+.chrome79 .flex_row {
+  display: flex;
+  flex-direction: row;
+}
+.chrome79 .flex_height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.chrome79 .flex_auto {
+  flex: auto;
+}
+.chrome79 .flex_1 {
+  flex: 1;
+}
+.chrome79 .min_height {
+  min-height: 0;
+}
+.chrome79 .height_100 {
+  height: 100%;
+}
+.chrome79 .width_100 {
+  width: 100%;
+}
+.chrome79 .width_500 {
+  width: 500px;
+}
+.chrome79 .overflow_auto {
+  overflow: auto;
+}
+.chrome79 .container {
+  height: 100%;
+  border: 1px solid #aaa;
+  background-color: #ddd;
+}
+.chrome79 .header {
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  background-color: cornflowerblue;
+}
+.chrome79 .item {
+  border: 1px solid #000;
+  background-color: #eee;
+}
+.chrome79 .footer {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: rgb(42, 169, 201);
+}

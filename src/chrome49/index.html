@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/src/chrome49/index.css">
+<div class="container flex_column">
+  <div class="header">header</div>
+  <!-- <div class="a" style="height: 300px; display: flex; flex-direction: column;"> -->
+    <!-- <div class="a-a" style="height: 50px; flex-shrink: 0;background-color: aqua;">a-a</div>
+    <div class="a-b" style="display: flex; flex-direction: column; height: 100%; background-color: blue;">
+      a-b
+      <div class="a-b-a" style="height: 50px; flex-shrink: 0;background-color: blueviolet;">a-b-a</div>
+      <div class="a-b-b" style="height: 100%;background-color: burlywood;">a-b-b</div>
+      <div class="a-b-b" style="height: 100%;background-color: burlywood;">a-b-b</div>
+    </div> -->
+  <!-- </div> -->
+
+  <!-- 问题描述：chrome 49 版本，当父元素设置 flex: 1 填充满容器，子元素设置 height: 100% 后因内容较少无法填充满父元素 -->
+  <!-- 原因：父元素未设置 height，故子元素获取不到父元素的 height -->
+  <div class="flex_1">
+    <div class="item height_100">
+      内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+    </div>
+  </div>
+
+  <!-- 解决方案1：通过父元素 absolute，子元素 relative，这样子元素的高度就会根据父元素的高度进行计算 -->
+  <!-- 解释：规范中有提到，如果包含块的高度没有显式地指定（高度由内容决定），并且不是绝对定位元素，
+                     则计算值为auto，高度和百分比值是没办法进行计算的！ auto * 100/100 = NaN -->
+  <!-- 缺陷：子元素 absolute 带来的影响，比如需要再设置 width: 100% -->
+  <!-- <div class="flex_1 relative">
+      <div class="item height_100 absolute">
+        内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+      </div>
+    </div> -->
+
+  <!-- 解决方案2：子元素不使用 height: 100%，而使用 flex-grow 来占满空间 -->
+  <!-- <div class="flex_1 flex">
+      <div class="item flex_1">
+        内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+      </div>
+    </div> -->
+
+  <!-- 解决方案3：父元素不使用 flex: 1，而使用 display: flex; + height: 100%; -->
+  <!-- 解释：应用于 display: flex 的元素（.flex_height），使其成为 flex 容器。
+                     这会自动设置 align-items: stretch，会告诉 child（.item）扩展父级的完整高度。 -->
+  <!-- <div class="flex_height">
+    <div class="item height_100">
+      内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+    </div>
+  </div> -->
+
+  <div class="footer">footer</div>
+</div>
+<!-- 总结：Chrome49 浏览器针对子元素设置 height: 100% 后因内容较少无法填充满父元素的情况，
+  建议父元素使用 display: flex; + height: 100%; -->
