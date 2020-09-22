@@ -1,9 +1,19 @@
-<link rel="stylesheet" href="/src/chrome79/index.css">
+<link rel="stylesheet" href="/src/qq10/index.css">
 <div class="container flex_column">
   <div class="header">header</div>
-
-  <div class="main flex_1 min_height">
+  <!--问题描述： qq浏览器 10.6 chromium 70，父元素 flex: auto，子元素 height: 100% 的情况下，无法撑开或收缩子元素 -->
+  <!-- 解决方案：将子元素 flex: auto 改为 flex: 1 并且要带上 min-height: 0 -->
+  <div class="main flex_auto min_height">
     <div class="height_100 overflow_auto">
+      <div class="item">item-1</div>
+      <div class="item">item-2</div>
+      <div class="item">item-4</div>
+      <div class="item">item-5</div>
+      <div class="item">item-6</div>
+      <div class="item">item-7</div>
+      <div class="item">item-8</div>
+      <div class="item">item-9</div>
+      <div class="item">item-10</div>
       <div class="item">item-1</div>
       <div class="item">item-2</div>
       <div class="item">item-4</div>
@@ -33,26 +43,5 @@
       <div class="item">item-10</div>
     </div>
   </div>
-  <!-- 问题描述：当父元素设置 flex: 1 填充满容器，子元素设置 height: 100% 后，子元素内容过多会超出父元素 -->
-  <!-- 解决方案：对于一个设置了 flex: 1 的元素，再对其设置 min-height：0，保证内容不超出外层容器 -->
-  <!-- 解释：父元素设置 min-height: 0 相当于告诉子元素父元素 height > 0，
-                     子元素可以由此间接地拿到父元素的高度，然后设置 height: 100% 保持父元素同样的高度，避免溢出 -->
-  <!-- chrome49 需使用 flex_height 替换 flex_1 -->
-  <!-- <div class="main flex_height min_height">
-    <div class="height_100 overflow_auto">
-      <div class="item">item-1</div>
-      <div class="item">item-2</div>
-      <div class="item">item-4</div>
-      <div class="item">item-5</div>
-      <div class="item">item-6</div>
-      <div class="item">item-7</div>
-      <div class="item">item-8</div>
-      <div class="item">item-9</div>
-      <div class="item">item-10</div>
-    </div>
-  </div> -->
-
   <div class="footer">footer</div>
 </div>
-<!-- 总结：Chrome79 以上浏览器，针对子元素设置 height: 100% 因内容过多超出父元素的情况，
-  建议父元素使用 min-height: 0;（Chrome 79） + display: flex; + height: 100%; （Chrome 49） -->

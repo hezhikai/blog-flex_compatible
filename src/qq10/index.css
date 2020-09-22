@@ -1,0 +1,55 @@
+.qq10 .flex_column {
+  display: flex;
+  flex-direction: column;
+}
+.qq10 .flex_row {
+  display: flex;
+  flex-direction: row;
+}
+.qq10 .flex_height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.qq10 .flex_auto {
+  flex: auto;
+}
+.qq10 .flex_1 {
+  flex: 1;
+}
+.qq10 .min_height {
+  min-height: 0;
+}
+.qq10 .height_100 {
+  height: 100%;
+}
+.qq10 .width_100 {
+  width: 100%;
+}
+.qq10 .width_500 {
+  width: 500px;
+}
+.qq10 .overflow_auto {
+  overflow: auto;
+}
+.qq10 .container {
+  height: 100%;
+  border: 1px solid #aaa;
+  background-color: #ddd;
+}
+.qq10 .header {
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  background-color: cornflowerblue;
+}
+.qq10 .item {
+  border: 1px solid #000;
+  background-color: #eee;
+}
+.qq10 .footer {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: rgb(42, 169, 201);
+}
